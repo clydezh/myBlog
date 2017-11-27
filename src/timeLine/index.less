@@ -1,0 +1,43 @@
+.time_line {
+	.time_main {
+		padding:20px;
+		width: 600px;
+		box-sizing: border-box;
+		margin: 0 auto;
+		> p {
+			text-align: left;
+			font-size: 14px;
+			color: #878787;
+			padding-bottom: 50px;
+		}
+		> ul {
+			width: 100%;
+			margin-bottom: 70px;
+			> li {
+				font-size: 12px;
+				&:nth-child(1) {
+					img {
+						width: 100%;
+					}
+					cursor: pointer;
+				}
+				&:nth-child(2) {
+					color: #919191;
+					line-height: 30px;
+				}
+				&:nth-child(3) {
+					margin-top: 10px;
+					color: #ccc;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.time_line{
+		.time_main{
+			width:100%;
+		}
+	}
+}

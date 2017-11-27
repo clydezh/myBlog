@@ -1,0 +1,251 @@
+@keyframes lineRotate01 {
+	0% {
+		transform: rotate(-30deg);
+		opacity: 0;
+	}
+	25% {
+		transform: rotate(0deg);
+		opacity: 0.2;
+	}
+	100%{
+		transform: rotate(45deg);
+		opacity: 1;
+	}
+}
+@keyframes lineRotate02 {
+	0% {
+		transform: rotate(30deg);
+		opacity: 0;
+	}
+	25% {
+		transform: rotate(0deg);
+		opacity: 0.2;
+	}
+	100%{
+		transform: rotate(-45deg);
+		opacity: 1;
+	}
+}
+
+@keyframes lineRotate01_2 {
+	0% {
+		transform: rotate(45deg);
+		opacity: 1;
+	}
+	100%{
+		transform: rotate(-30deg);
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+@keyframes lineRotate02_2 {
+	0% {
+		transform: rotate(-45deg);
+		opacity: 1;
+	}
+	100%{
+		transform: rotate(30deg);
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+@keyframes opacityMenu {
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity:1;
+		visibility: visible;
+	}
+}
+@keyframes opacityMenu_2 {
+	0%{
+		opacity: 1;
+	}
+	100%{
+		opacity:0;
+		visibility: hidden;
+	}
+}
+
+
+.nav_box {
+	position: relative;
+	padding:0 20px;
+	.nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 20px 0 0px 0;
+		color: #000000;
+		font-size: 18px;
+		font-family: 'Oranienbaum', serif;
+		.left {
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			.circle {
+				color: #ffffff;
+				font-size: 16px;
+				width: 24px;
+				height: 24px;
+				margin-right: 4px;
+				border-radius: 50%;
+				background: #343434;
+				line-height: 24px;
+				text-align: center;
+				font-family: 'arial';
+			}
+		}
+		.right {
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			ul {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				height: 13px;
+				margin-right: 4px;
+				li {
+					width: 3px;
+					height: 3px;
+					background: #000;
+					border-radius: 50%;
+				}
+			}
+			span {
+				letter-spacing: 2px;
+				font-size: 15px;
+			}
+		}
+	}
+	.menu_layout {
+		.menu {
+			visibility: hidden;
+			position: fixed;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 1000;
+			opacity: 0;
+			background-color: rgba(255, 255, 255, 0.85);
+			ul.menulist{
+				li {
+					position: relative;
+					text-align: center;
+					padding: 8px;
+					color: #000;
+					font-family: 'Oranienbaum', serif;
+					font-size: 28px;
+					cursor: pointer;
+					a{
+						color: #000;
+						border:none;
+						&:focus{
+							text-decoration:none;
+						}
+						&:-webkit-any-link {
+							text-decoration: none;
+						}
+					}
+					&:after{
+						content: '';
+						position: absolute;
+						top:42px;
+						left:0;
+						right:0;
+						margin:0 auto;
+						width:0;
+						transition:width 0.2s ease-in;
+						border-bottom:1px solid #000000;
+					}
+					&:hover:after{
+						width:15%;
+						transition:width 0.3s ease-out;
+						border-bottom:1px solid #000000;
+					}
+				
+				}
+				li.actived{
+					&:after{
+						width:15%;
+					}
+				}
+			}
+			
+		}
+		ol {
+			visibility: hidden;
+			width:50px;
+			height:15px;
+			position: absolute;
+			top: 27px;
+			right: 33px;
+			z-index: 1001;
+			cursor: pointer;
+			li {
+				position: absolute;
+				top: 5px;
+				right: 5px;
+				z-index: 1001;
+				width: 16px;
+				height: 2px;
+				background: #000;
+				border-radius: 1px;
+				opacity: 0;
+				&.rotate01:nth-child(1) {
+					transform: rotate(-30deg);
+					animation: lineRotate01 1s alternate forwards ;
+				}
+				&.rotate02:nth-child(2) {
+					transform: rotate(30deg);
+					animation: lineRotate02 1s alternate forwards ;
+				}
+				&.rotate01_2:nth-child(1) {
+					transform: rotate(45deg);
+					animation: lineRotate01_2 0.2s alternate forwards ;
+				}
+				&.rotate02_2:nth-child(2) {
+					transform: rotate(-45deg);
+					animation: lineRotate02_2 0.2s alternate forwards ;
+				}
+			}
+		}
+		.menu_hidden {
+			animation: opacityMenu 0.3s ease-in 0.3s forwards;
+			ul.menulist{
+				margin-top:100px;
+				transition: all 0.4s ease-out;
+			}
+		}
+		.menu_hidden_2 {
+			visibility: visible;
+			animation: opacityMenu_2 0.2s ease-in forwards;
+			ul.menulist{
+				margin-top:-300px;
+				transition: all 0.4s ease-in;
+			}
+		}
+		.ol_hidden{
+			visibility: visible;
+		}
+		.ol_hidden_2{
+			transition-delay: 0.5s;
+			visibility: hidden;
+		}
+	}
+	
+}
+
+
+@media screen and (max-width: 991px) {
+	#menulist li:hover:after{
+		width:45%;
+	}
+	#menulist li.actived:after{
+		width:45%;
+	}
+}
