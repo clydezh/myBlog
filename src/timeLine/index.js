@@ -16,47 +16,47 @@ class TimeLine extends Component {
 					{/*<p>zhe shi wo de jie shao</p>*/}
 					<ul>
 						<li><img src={story01} alt=""/></li>
-						<li>Hangzhou，with gaomei , xihu lake, xixi wetland , baoshi moutain, lingyin temple.</li>
+						<li>Hangzhou，with yaoyao , xihu lake, lingyin temple.</li>
 						<li>2017-01-08</li>
 					</ul>
 					<ul>
 						<li><img src={story02} alt=""/></li>
-						<li>Hangzhou，with gaomei , xihu lake, xixi wetland , baoshi moutain, lingyin temple.</li>
+						<li>Hangzhou，with yaoyao , xihu lake</li>
 						<li>2017-01-08</li>
 					</ul>
 					<ul>
 						<li><img src={story03} alt=""/></li>
-						<li>Hangzhou，with gaomei , xihu lake, xixi wetland , baoshi moutain, lingyin temple.</li>
+						<li>Hangzhou，with yoayao , xihu lake, </li>
 						<li>2017-01-08</li>
 					</ul>
 					<ul>
 						<li><img src={story01} alt=""/></li>
-						<li>Hangzhou，with gaomei , xihu lake, xixi wetland , baoshi moutain, lingyin temple.</li>
+						<li>Hangzhou，with yaoyao , xihu lake, </li>
 						<li>2017-01-08</li>
 					</ul>
 					<ul>
 						<li><img src={story02} alt=""/></li>
-						<li>Hangzhou，with gaomei , xihu lake, xixi wetland , baoshi moutain, lingyin temple.</li>
+						<li>Hangzhou，with yaoyao , xihu lake, </li>
 						<li>2017-01-08</li>
 					</ul>
 					<ul>
 						<li><img src={story03} alt=""/></li>
-						<li>Hangzhou，with gaomei , xihu lake, xixi wetland , baoshi moutain, lingyin temple.</li>
+						<li>Hangzhou，with yaoyao , xihu lake, xixi wetland , baoshi moutain, lingyin temple.</li>
 						<li>2017-01-08</li>
 					</ul>
 					<ul>
 						<li><img src={story01} alt=""/></li>
-						<li>Hangzhou，with gaomei , xihu lake, xixi wetland , baoshi moutain, lingyin temple.</li>
+						<li>Hangzhou，with yaoyao , xihu lake, xixi wetland , baoshi moutain, lingyin temple.</li>
 						<li>2017-01-08</li>
 					</ul>
 					<ul>
 						<li><img src={story02} alt=""/></li>
-						<li>Hangzhou，with gaomei , xihu lake, xixi wetland , baoshi moutain, lingyin temple.</li>
+						<li>Hangzhou，with yaoyao , xihu lake, xixi wetland </li>
 						<li>2017-01-08</li>
 					</ul>
 					<ul>
 						<li><img src={story03} alt=""/></li>
-						<li>Hangzhou，with gaomei , xihu lake, xixi wetland , baoshi moutain, lingyin temple.</li>
+						<li>Hangzhou，with yaoyao , xihu lake, xixi wetland, lingyin temple.</li>
 						<li>2017-01-08</li>
 					</ul>
 				</div>

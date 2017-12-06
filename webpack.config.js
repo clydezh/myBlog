@@ -6,7 +6,7 @@ const webpack = require('webpack')
 module.exports = {
 	entry: {
 		main: ['./src/index.js'],   //应用代码
-		vendor: ['react', 'react-dom', 'react-router', 'react-router-dom', 'antd', 'axios', 'moment', 'jquery']   //公共代码库
+		vendor: ['react', 'react-dom', 'react-router', 'react-router-dom', 'antd', 'axios', 'moment', 'jquery']   //提取公共代码库，生产环境可以注释掉，提高打开页面的速度(不需要加载vender.js了)。开发的时候打开提高编译速度）
 	},
 	output: {
 		filename: '[name].[chunkhash:5].js',
@@ -39,8 +39,7 @@ module.exports = {
 					{
 						loader: 'url-loader',
 						options: {
-							// limit: 10000,                   //小于10000K的图片文件转base64到css里,当然css文件体积更大;
-							name: '../images/[name].[ext]'     //设置最终img路径;
+							limit: 10000,                      //低于10000byte的图片文件转base64到css里,当然css文件体积更大;
 						}
 					}
 			},
@@ -55,7 +54,7 @@ module.exports = {
 			},
 			{
 				test: /\.jsx?$/,
-				// exclude: /(node_modules|bower_components)/,
+				exclude: /(node_modules|bower_components)/,
 				use: [
 					{
 						loader: 'cache-loader',  //请只对性能开销较大的 loader 使用此 loader
@@ -73,7 +72,7 @@ module.exports = {
 									libraryDirectory: 'lib',
 									style: 'css'
 								}],
-								//'transform-runtime'       //必须要排除node_modules等， 提高速度,否则报错
+								'transform-runtime'       //必须要排除node_modules等， 提高速度,否则报错
 							],
 						}
 					}

@@ -18,12 +18,13 @@ class Footer extends Component{
 								<span>R</span>
 								<span>REACT</span>
 							</dt>
+							<dd>Worked by React 2017</dd>
 						</dl>
 					</Col>
 					<Col
 						xs={24} sm={12} md={12} lg={6} xl={6}>
 						<dl>
-							<dt>Worked by React 2017</dt>
+							<dt>about me</dt>
 						</dl>
 					</Col>
 					<Col
