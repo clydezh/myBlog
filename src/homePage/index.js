@@ -7,7 +7,7 @@ import { Row,Col } from 'antd';
 import Footer from '../component/footer'
 import Navigation from '../component/nav';
 
-const requireContext = require.context("../images", true, /^.+\.jpg/);
+const requireContext = require.context("../images", true, /^.+(\.jpg|\.jpeg)/);
 const images = requireContext.keys().map(requireContext);                 //一次性导入多张图片
 
 class HomePage extends Component{
