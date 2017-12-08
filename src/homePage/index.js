@@ -283,6 +283,45 @@ class HomePage extends Component{
 									</figcaption>
 								</figure>
 							</Col>
+							<Col
+								className='masonry_items'
+								xs={24} sm={12} md={8} lg={6} xl={6}
+							>
+								<figure>
+									<img src={images[19]} alt=""/>
+									<figcaption>
+										<h2>On Load</h2>
+										<p>the frist page.</p>
+										<a href="#">View more</a>
+									</figcaption>
+								</figure>
+							</Col>
+							<Col
+								className='masonry_items'
+								xs={24} sm={12} md={8} lg={6} xl={6}
+							>
+								<figure>
+									<img src={images[20]} alt=""/>
+									<figcaption>
+										<h2>On Load</h2>
+										<p>the frist page.</p>
+										<a href="#">View more</a>
+									</figcaption>
+								</figure>
+							</Col>
+							<Col
+								className='masonry_items'
+								xs={24} sm={12} md={8} lg={6} xl={6}
+							>
+								<figure>
+									<img src={images[21]} alt=""/>
+									<figcaption>
+										<h2>On Load</h2>
+										<p>the frist page.</p>
+										<a href="#">View more</a>
+									</figcaption>
+								</figure>
+							</Col>
 						</Row>
 					</div>
 
