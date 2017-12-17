@@ -6,7 +6,7 @@ const webpack = require('webpack')
 module.exports = {
 	entry: {
 		main: ['./src/index.js'],   //应用代码
-		vendor: ['react', 'react-dom', 'react-router', 'react-router-dom', 'antd', 'axios', 'moment', 'jquery']   //提取公共代码库，生产环境可以注释掉，提高打开页面的速度(不需要加载vender.js了)。开发的时候打开提高编译速度）
+		// vendor: ['react', 'react-dom', 'react-router', 'react-router-dom', 'antd', 'axios', 'moment', 'jquery']   //提取公共代码库，生产环境可以注释掉，提高打开页面的速度(不需要加载vender.js了)。开发的时候打开提高编译速度）
 	},
 	output: {
 		filename: '[name].[chunkhash:5].js',
@@ -83,10 +83,10 @@ module.exports = {
 
 	plugins: [
 		new webpack.HashedModuleIdsPlugin(),        //让vendor的hash值保持不变
-		new webpack.optimize.CommonsChunkPlugin({   //使用 CommonsChunkPlugin 为每个页面间的应用程序共享代码创建 bundle。多页应用能够在入口起点重用大量代码/模块。
-			name: 'vendor',
-			minChunks: Infinity                     //随着 entrie chunk 越来越多，保证没其它的模块会打包进 vendor chunk
-		}),
+		// new webpack.optimize.CommonsChunkPlugin({   //使用 CommonsChunkPlugin 为每个页面间的应用程序共享代码创建 bundle。多页应用能够在入口起点重用大量代码/模块。
+		// 	name: 'vendor',
+		// 	minChunks: Infinity                     //随着 entrie chunk 越来越多，保证没其它的模块会打包进 vendor chunk
+		// }),
 		new webpack.optimize.CommonsChunkPlugin({   //runtime必须放在库实例之后
 			name: 'runtime',
 			filename: '[name].[hash:5].js',

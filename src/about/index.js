@@ -5,8 +5,8 @@ import '../utils/iconfont.less'
 import { Input , Icon,Row, Col} from 'antd'
 import Navigation from '../component/nav'
 import Footer from '../component/footer'
-import aboutMeImg from '../images/aboutme-img9.jpg'
-import meStory from '../images/blog-image-1.jpg';
+import aboutMeImg from '../images/05.jpg'
+import meStory from '../images/20.jpg';
 
 class AboutMe extends Component {
 	state = {
